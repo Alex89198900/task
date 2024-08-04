@@ -5,9 +5,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
 
+const PORT =3000
+
 export default defineConfig({
   server:{
-    port:3333,
+    port:PORT,
     proxy:{
       '/api/v1/': {
         target: 'https://live.devnimble.com',
