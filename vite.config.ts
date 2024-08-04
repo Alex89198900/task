@@ -3,7 +3,6 @@
 
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import eslint from 'vite-plugin-eslint';
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -19,7 +18,7 @@ export default defineConfig({
       }                                                       // https://live.devnimble.com/api/v1/contacts 
     }
   },
-  plugins: [react(), eslint()],
+  plugins: [react(), ],
   test: {
     globals: true,
     environment: 'jsdom',
