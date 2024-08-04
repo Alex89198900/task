@@ -46,7 +46,7 @@ export default defineConfig(({mode}) => {
 
   return {
     server:{
-      port:process.env.VITE_PORT,
+      port:process.env.VITE_PORT || 5000,
       proxy:{
         '/api/v1/': {
           target: 'https://live.devnimble.com',
