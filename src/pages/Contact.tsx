@@ -33,7 +33,6 @@ function Contact() {
     mode: "onSubmit",
     reValidateMode: "onSubmit",
   })
-  console.log(import.meta.env.VITE_PORT)
   useEffect(() => {
     let idContact = localStorage.getItem("id")
     async function fetchData() {
