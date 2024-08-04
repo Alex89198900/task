@@ -10,7 +10,15 @@ const env = loadEnv("", process.cwd(), "");
 
 export default defineConfig({
  
- 
+  server:{
+    port:3000,
+    proxy:{
+      '/api/v1/': {
+        target: 'https://live.devnimble.com',
+        changeOrigin: true,
+      }                                                       // https://live.devnimble.com/api/v1/contacts 
+    }
+  },
   plugins: [react(), ],
   test: {
     globals: true,
