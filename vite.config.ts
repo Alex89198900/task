@@ -10,7 +10,7 @@ dotenv.config()
 
 export default defineConfig({
   server:{
-    port: process.env.PORT,
+    port: process.env.PORT||3000,
     proxy:{
       '/api/v1/': {
         target: 'https://live.devnimble.com',
