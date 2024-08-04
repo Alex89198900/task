@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "set PORT=0000&&vite",
     "build": " vite build",
     "preview": "vite preview",
     "test": "vitest run --coverage",
