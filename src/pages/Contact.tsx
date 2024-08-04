@@ -33,6 +33,7 @@ function Contact() {
     mode: "onSubmit",
     reValidateMode: "onSubmit",
   })
+  console.log(name1)
   useEffect(() => {
     let idContact = localStorage.getItem("id")
     async function fetchData() {
