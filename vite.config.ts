@@ -4,12 +4,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
+import dotenv from 'dotenv'
 
-const PORT =3000
+dotenv.config()
+
 
 export default defineConfig({
   server:{
-    port:PORT,
+    port: process.env.PORT,
     proxy:{
       '/api/v1/': {
         target: 'https://live.devnimble.com',
