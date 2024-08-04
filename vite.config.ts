@@ -42,11 +42,11 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, process.cwd());
+  process.env = {...process.env, ...loadEnv(mode, process.cwd())};
 
   return {
     server:{
-      port: env.VITE_PORT,
+      port:process.env.VITE_PORT,
       proxy:{
         '/api/v1/': {
           target: 'https://live.devnimble.com',
